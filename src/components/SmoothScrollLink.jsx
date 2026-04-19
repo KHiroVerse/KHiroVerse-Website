@@ -22,21 +22,15 @@ const SmoothScrollLink = ({ to, children, className, ...props }) => {
     }
 
     if (isHashLink) {
-      // If we are already on the home page, let the browser handle the anchor scroll
-      if (location.pathname === '/') {
-        // Do nothing, standard anchor behavior will work
-        return
-      } else {
-        // If we are on another page, navigate to home with the hash
-        e.preventDefault()
-        navigate(to)
-      }
+      e.preventDefault()
+      navigate(to)
     }
   }
 
   if (isHashLink) {
+    const href = to.startsWith('/') ? to : `/${to}`
     return (
-      <a href={location.pathname === '/' ? to : `/${to}`} onClick={handleClick} className={className} {...props}>
+      <a href={href} onClick={handleClick} className={className} {...props}>
         {children}
       </a>
     )
