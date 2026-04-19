@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 
 const SmoothScrollLink = ({ to, children, className, ...props }) => {
   const navigate = useNavigate()
@@ -43,9 +43,9 @@ const SmoothScrollLink = ({ to, children, className, ...props }) => {
   }
 
   return (
-    <Link to={to} className={className} {...props}>
+    <NavLink to={to} className={className} {...props}>
       {children}
-    </Link>
+    </NavLink>
   )
 }
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import SmoothScrollLink from './SmoothScrollLink'
 
 const Navbar = () => {
@@ -10,11 +9,40 @@ const Navbar = () => {
           KHiroVerse
         </h1>
           <ul className="hidden md:flex gap-8 text-sm font-medium">
-            <li><SmoothScrollLink to="/" className="hover:text-cyan transition-colors">Home</SmoothScrollLink></li>
-            <li><SmoothScrollLink to="/#about" className="hover:text-cyan transition-colors">About</SmoothScrollLink></li>
-            <li><SmoothScrollLink to="/projects" className="hover:text-orange transition-colors">Projects</SmoothScrollLink></li>
-            <li><SmoothScrollLink to="/#skills" className="hover:text-pink transition-colors">Skills</SmoothScrollLink></li>
-            <li><SmoothScrollLink to="/contact" className="hover:text-cyan transition-colors">Contact</SmoothScrollLink></li>
+            <li>
+              <SmoothScrollLink 
+                to="/" 
+                className={({ isActive }) => isActive ? 'text-cyan' : 'hover:text-cyan transition-colors'}
+              >
+                Home
+              </SmoothScrollLink>
+            </li>
+            <li>
+              <SmoothScrollLink to="/#about" className="hover:text-cyan transition-colors">
+                About
+              </SmoothScrollLink>
+            </li>
+            <li>
+              <SmoothScrollLink 
+                to="/projects" 
+                className={({ isActive }) => isActive ? 'text-orange' : 'hover:text-cyan transition-colors'}
+              >
+                Projects
+              </SmoothScrollLink>
+            </li>
+            <li>
+              <SmoothScrollLink to="/#skills" className="hover:text-pink transition-colors">
+                Skills
+              </SmoothScrollLink>
+            </li>
+            <li>
+              <SmoothScrollLink 
+                to="/contact" 
+                className={({ isActive }) => isActive ? 'text-cyan' : 'hover:text-cyan transition-colors'}
+              >
+                Contact
+              </SmoothScrollLink>
+            </li>
           </ul>
         <button className="md:hidden text-cyan">
           Menu
