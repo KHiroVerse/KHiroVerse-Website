@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const Button = ({ 
   children, 
@@ -31,6 +32,16 @@ const Button = ({
   )
 
   if (href) {
+    const isInternal = !href.startsWith('http://') && !href.startsWith('https://');
+    
+    if (isInternal) {
+      return (
+        <Link to={href} {...props}>
+          {content}
+        </Link>
+      )
+    }
+
     return (
       <a href={href} {...props}>
         {content}
