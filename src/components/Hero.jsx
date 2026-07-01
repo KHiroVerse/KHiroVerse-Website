@@ -45,8 +45,8 @@ const Hero = () => {
         <Button href="https://youtube.com/@KHiroVerse" target="_blank" variant="secondary">
           View YouTube Channel
         </Button>
-        <Button href="https://youtube.com/@KHiroVerse2" target="_blank" variant="pink">
-          View Roblox Channel
+        <Button href="/contact" variant="pink">
+          Contact Me
         </Button>
       </motion.div>
     </motion.section>

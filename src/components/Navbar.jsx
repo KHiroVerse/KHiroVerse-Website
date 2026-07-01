@@ -19,7 +19,6 @@ const Navbar = () => {
     const socialLinks = [
       { href: 'https://github.com/KHiroVerse', label: 'GitHub', color: 'hover:text-orange' },
       { href: 'https://youtube.com/@KHiroVerse', label: 'YouTube', color: 'hover:text-pink' },
-      { href: 'https://youtube.com/@KHiroVerse2', label: 'Roblox', color: 'hover:text-pink' },
     ]
 
   return (
