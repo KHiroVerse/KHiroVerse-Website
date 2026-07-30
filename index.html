@@ -2,10 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Personal portfolio of a passionate developer — building playful projects." />
-    <title>KHiroVerse Website</title>
+    <meta
+      name="description"
+      content="Personal portfolio of a passionate developer — building playful, pixel-perfect experiences."
+    />
+    <meta
+      name="theme-color"
+      content="#0a0a0a"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="theme-color"
+      content="#9333ea"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="application-name" content="KHiroVerse" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="KHiroVerse" />
+    <title>KHiroVerse &mdash; Dev Portfolio</title>
+
+    <!-- Favicons / App icon — powered by public/pfp.png -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/pfp.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/pfp.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/pfp.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/pfp.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/pfp.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/pfp.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/pfp.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/pfp.png" />
+    <link rel="shortcut icon" type="image/png" href="/pfp.png" />
+    <link rel="manifest" href="/manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,13 +46,13 @@
     />
     <script type="module">
       if (import.meta.hot?.on) {
-        import.meta.hot.on('vite:error', (error) => {
+        import.meta.hot.on("vite:error", (error) => {
           if (error.err) {
             console.error(
-              [error.err.message, error.err.frame].filter(Boolean).join('\n'),
-            )
+              [error.err.message, error.err.frame].filter(Boolean).join("\n"),
+            );
           }
-        })
+        });
       }
     </script>
   </head>
